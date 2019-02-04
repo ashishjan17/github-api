@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="github_api_test.xml" />
+	<flow name="github_api_testFlow" doc:id="35114005-bc5e-4df8-a021-864a414ea322" >
+	</flow>
+	<munit:test name="github_api_test-github-apiFlowTest" description="Test" doc:id="50f04689-5ed9-496c-a61c-0de4cb309a21" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to github-apiFlow" doc:id="22bf7cfa-de4e-4466-bf25-525f5dbeec9c" name="github-apiFlow"/>
+			<munit-tools:verify-call doc:name="Verify call" doc:id="d65ec3bf-8b88-421f-9b2a-b01ad1fd19a8" processor="mule.logger" />
+		</munit:execution>
+	</munit:test>
+
+
+</mule>
